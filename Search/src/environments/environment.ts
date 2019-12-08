@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // apiUrl:"'https://api.github.com/users/Chillsthrills?access_token=' + ddf7c2892ea7c1fa4940cbc5ff917003a168db55"
-  accessToken: ddf7c2892ea7c1fa4940cbc5ff917003a168db55;
+  accessToken: "ddf7c2892ea7c1fa4940cbc5ff917003a168db55"
 
 };
 
