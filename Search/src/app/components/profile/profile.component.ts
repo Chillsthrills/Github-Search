@@ -7,10 +7,12 @@ import { EntryRequestService } from '../../entry-http/entry-request.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  profile:any[];
 
   constructor(private entryRequestService: EntryRequestService) {
   this.entryRequestService.getProfileInfo().subscribe(profile => {
   console.log(profile);
+  this.profile = profile;
 });
 }
 
