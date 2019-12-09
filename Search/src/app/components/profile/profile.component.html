@@ -1,7 +1,3 @@
-<div *ngIf="profile">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      {{profile.name}} <small>({{profile.login}})</small>
-      </div>
-</div>
-</div>
+<div *ngFor= "let profile of profile">
+  {{profile.name}} {{profile.login}}
+  </div>
