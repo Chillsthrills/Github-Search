@@ -9,7 +9,7 @@ import { EntryRequestService } from '../../entry-http/entry-request.service';
 export class ProfileComponent implements OnInit {
    profile:any[];
 
-   
+
   constructor(private entryRequestService: EntryRequestService) {
   this.entryRequestService.getProfileInfo().subscribe(profile => {
   console.log(profile);
