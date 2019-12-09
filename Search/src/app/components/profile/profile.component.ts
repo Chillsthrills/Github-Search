@@ -8,6 +8,7 @@ import { EntryRequestService } from '../../entry-http/entry-request.service';
 })
 export class ProfileComponent implements OnInit {
    profile:any[];
+   repos: any[];
 
 
   constructor(private entryRequestService: EntryRequestService) {
@@ -15,6 +16,10 @@ export class ProfileComponent implements OnInit {
   console.log(profile);
   this.profile = profile;
 });
+  this.entryRequestService.getProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+  })
 }
 
   ngOnInit() {

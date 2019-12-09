@@ -23,8 +23,19 @@
                 <span class="label label-warning">{{profile.public_gists}} Public gists</span>
                 <span class="label label-danger">{{profile.public_repos}} Public repos</span>
               </p>
-              <p><a href="{{profile.html_url}}" class="btn btn-success btn-sm">View github profile</a>
+              <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View github profile</a>
               </p>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Repos</h3>
+                  </div>
+                  <div class="panel-body" *ngFor="let repo of repos">
+                    <p>
+                        {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm
+                        btn-warning">View this project on github</a>
+                    </p>
+                    </div>
+                </div>
             </div>
       </div>
     </div>
