@@ -7,22 +7,27 @@ import { EntryRequestService } from '../../entry-http/entry-request.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-   profile:any[];
-   repos: any[];
+   profile:any;
+   repos:any;
+   profil:string;
 
 
   constructor(private entryRequestService: EntryRequestService) {
+
+}
+
+findProfile(){
+  this.entryRequestService.changeName(this.profil);
   this.entryRequestService.getProfileInfo().subscribe(profile => {
-  console.log(profile);
-  this.profile = profile;
-});
+    this.profile = profile;
+  });
   this.entryRequestService.getProfileRepos().subscribe(repos => {
-      console.log(repos);
-      this.repos = repos;
-  })
+    this.repos = repos;
+  });
 }
 
   ngOnInit() {
+   
   }
 
 }
